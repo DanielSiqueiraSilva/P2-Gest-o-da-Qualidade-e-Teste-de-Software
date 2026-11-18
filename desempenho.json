@@ -1,0 +1,74 @@
+{
+  "executado_em_utc": "2026-11-18T22:46:40.756007+00:00",
+  "ambiente": "localhost 127.0.0.1; cópia temporária da base didática; sem serviços de terceiros",
+  "endpoint": "GET /api/products/produto-teste",
+  "carga_limitada": true,
+  "node": "v22.16.0",
+  "stages": [
+    {
+      "cenario": "carga-baixa",
+      "concorrencia": 2,
+      "duracao_segundos": 3.0,
+      "requisicoes": 13978,
+      "aprovadas": 13978,
+      "erros": 0,
+      "taxa_erro_pct": 0.0,
+      "latencia_media_ms": 0.43,
+      "p95_ms": 0.7,
+      "latencia_max_ms": 11.54,
+      "vazao_req_s": 4656.36
+    },
+    {
+      "cenario": "carga-media",
+      "concorrencia": 6,
+      "duracao_segundos": 3.01,
+      "requisicoes": 12937,
+      "aprovadas": 12937,
+      "erros": 0,
+      "taxa_erro_pct": 0.0,
+      "latencia_media_ms": 1.39,
+      "p95_ms": 2.42,
+      "latencia_max_ms": 6.72,
+      "vazao_req_s": 4303.92
+    },
+    {
+      "cenario": "carga_referencia",
+      "concorrencia": 12,
+      "duracao_segundos": 3.01,
+      "requisicoes": 12159,
+      "aprovadas": 12159,
+      "erros": 0,
+      "taxa_erro_pct": 0.0,
+      "latencia_media_ms": 2.97,
+      "p95_ms": 5.53,
+      "latencia_max_ms": 20.91,
+      "vazao_req_s": 4037.39
+    },
+    {
+      "cenario": "estresse",
+      "concorrencia": 24,
+      "duracao_segundos": 3.04,
+      "requisicoes": 11854,
+      "aprovadas": 11854,
+      "erros": 0,
+      "taxa_erro_pct": 0.0,
+      "latencia_media_ms": 6.12,
+      "p95_ms": 12.01,
+      "latencia_max_ms": 32.09,
+      "vazao_req_s": 3899.85
+    },
+    {
+      "cenario": "recuperacao",
+      "concorrencia": 2,
+      "duracao_segundos": 3.0,
+      "requisicoes": 16405,
+      "aprovadas": 16405,
+      "erros": 0,
+      "taxa_erro_pct": 0.0,
+      "latencia_media_ms": 0.37,
+      "p95_ms": 0.54,
+      "latencia_max_ms": 11.5,
+      "vazao_req_s": 5465.55
+    }
+  ]
+}

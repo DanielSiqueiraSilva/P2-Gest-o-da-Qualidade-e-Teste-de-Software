@@ -1,0 +1,178 @@
+TAP version 13
+# Subtest: CT-F01 / RF-01 cadastro com dados fictícios
+ok 1 - CT-F01 / RF-01 cadastro com dados fictícios
+  ---
+  duration_ms: 333.652348
+  type: 'test'
+  ...
+# Subtest: CT-F02 / RF-02 autenticação e sessão
+ok 2 - CT-F02 / RF-02 autenticação e sessão
+  ---
+  duration_ms: 2.140854
+  type: 'test'
+  ...
+# Subtest: CT-F03 / RF-03 catálogo contém atributos
+ok 3 - CT-F03 / RF-03 catálogo contém atributos
+  ---
+  duration_ms: 10.812155
+  type: 'test'
+  ...
+# Subtest: CT-APISUP01 / RF-03 catálogo possui categorias para o filtro
+ok 4 - CT-APISUP01 / RF-03 catálogo possui categorias para o filtro
+  ---
+  duration_ms: 12.767549
+  type: 'test'
+  ...
+# Subtest: CT-F05 / RF-05 cotação com duas unidades
+ok 5 - CT-F05 / RF-05 cotação com duas unidades
+  ---
+  duration_ms: 5.660256
+  type: 'test'
+  ...
+# Subtest: CT-F06 / RF-06 estoque consultável
+ok 6 - CT-F06 / RF-06 estoque consultável
+  ---
+  duration_ms: 2.469459
+  type: 'test'
+  ...
+# Subtest: CT-F07 / RF-07 cupom VINTE prevalece sobre automático
+ok 7 - CT-F07 / RF-07 cupom VINTE prevalece sobre automático
+  ---
+  duration_ms: 5.772874
+  type: 'test'
+  ...
+# Subtest: CT-F08 / RF-08 endereço obrigatório (negativo)
+ok 8 - CT-F08 / RF-08 endereço obrigatório (negativo)
+  ---
+  duration_ms: 3.971472
+  type: 'test'
+  ...
+# Subtest: CT-F09 / RF-09 finalizar pedido com endereço e persistência
+ok 9 - CT-F09 / RF-09 finalizar pedido com endereço e persistência
+  ---
+  duration_ms: 66.954432
+  type: 'test'
+  ...
+# Subtest: CT-I01 / RF-06,RF-09 estoque alterado após compra e persistido
+ok 10 - CT-I01 / RF-06,RF-09 estoque alterado após compra e persistido
+  ---
+  duration_ms: 31.164608
+  type: 'test'
+  ...
+# Subtest: CT-I02 / RF-09,RF-10 pedido criado recuperável pela API
+ok 11 - CT-I02 / RF-09,RF-10 pedido criado recuperável pela API
+  ---
+  duration_ms: 3.184086
+  type: 'test'
+  ...
+# Subtest: CT-F10 / RF-10 histórico de pedidos próprios
+ok 12 - CT-F10 / RF-10 histórico de pedidos próprios
+  ---
+  duration_ms: 1.813582
+  type: 'test'
+  ...
+# Subtest: CT-N01 / RN-03 cotação negativa rejeitada
+ok 13 - CT-N01 / RN-03 cotação negativa rejeitada
+  ---
+  duration_ms: 2.193824
+  type: 'test'
+  ...
+# Subtest: CT-N02 / RN-03 acima do estoque rejeitado
+ok 14 - CT-N02 / RN-03 acima do estoque rejeitado
+  ---
+  duration_ms: 3.472029
+  type: 'test'
+  ...
+# Subtest: CT-N03 / RN-04 cupom vencido rejeitado
+ok 15 - CT-N03 / RN-04 cupom vencido rejeitado
+  ---
+  duration_ms: 1.423955
+  type: 'test'
+  ...
+# Subtest: CT-S01 / RN-10 cliente B não acessa pedido A
+ok 16 - CT-S01 / RN-10 cliente B não acessa pedido A
+  ---
+  duration_ms: 1.902886
+  type: 'test'
+  ...
+# Subtest: CT-S02 / RN-11 alteração administrativa sem token rejeitada
+ok 17 - CT-S02 / RN-11 alteração administrativa sem token rejeitada
+  ---
+  duration_ms: 1.315631
+  type: 'test'
+  ...
+# Subtest: CT-S03 / RN-11 alteração administrativa com cliente rejeitada
+ok 18 - CT-S03 / RN-11 alteração administrativa com cliente rejeitada
+  ---
+  duration_ms: 1.490435
+  type: 'test'
+  ...
+# Subtest: CT-S04 / RN-12 entrada administrativa negativa rejeitada
+ok 19 - CT-S04 / RN-12 entrada administrativa negativa rejeitada
+  ---
+  duration_ms: 1.432167
+  type: 'test'
+  ...
+# Subtest: CT-R01 / RN-09 repetição imediata não cria dois pedidos
+ok 20 - CT-R01 / RN-09 repetição imediata não cria dois pedidos
+  ---
+  duration_ms: 27.716104
+  type: 'test'
+  ...
+# Subtest: CT-R02 / RN-12 preço enviado pelo navegador não altera cálculo
+ok 21 - CT-R02 / RN-12 preço enviado pelo navegador não altera cálculo
+  ---
+  duration_ms: 1.276393
+  type: 'test'
+  ...
+# Subtest: CT-R03 / RN-10 histórico não expõe pedidos de outro cliente
+ok 22 - CT-R03 / RN-10 histórico não expõe pedidos de outro cliente
+  ---
+  duration_ms: 1.470145
+  type: 'test'
+  ...
+# Subtest: CT-CP01 / caixa-preta equivalência + valor-limite do desconto (199,99/200/200,01)
+ok 23 - CT-CP01 / caixa-preta equivalência + valor-limite do desconto (199,99/200/200,01)
+  ---
+  duration_ms: 68.417425
+  type: 'test'
+  ...
+# Subtest: CT-CP02 / caixa-preta equivalência + valor-limite do frete (299,99/300/300,01)
+ok 24 - CT-CP02 / caixa-preta equivalência + valor-limite do frete (299,99/300/300,01)
+  ---
+  duration_ms: 72.147989
+  type: 'test'
+  ...
+# Subtest: CT-F02B / RF-02 logout encerra a sessão do cliente
+ok 25 - CT-F02B / RF-02 logout encerra a sessão do cliente
+  ---
+  duration_ms: 74.445315
+  type: 'test'
+  ...
+# Subtest: CT-F05B / RF-05 adicionar item e incrementar quantidade no carrinho
+ok 26 - CT-F05B / RF-05 adicionar item e incrementar quantidade no carrinho
+  ---
+  duration_ms: 3.034771
+  type: 'test'
+  ...
+# Subtest: CT-F05C / RF-05 remover item do carrinho
+ok 27 - CT-F05C / RF-05 remover item do carrinho
+  ---
+  duration_ms: 1.344024
+  type: 'test'
+  ...
+# Subtest: CT-F05D / RF-05 alterar quantidade no carrinho
+ok 28 - CT-F05D / RF-05 alterar quantidade no carrinho
+  ---
+  duration_ms: 1.171845
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 939.313351

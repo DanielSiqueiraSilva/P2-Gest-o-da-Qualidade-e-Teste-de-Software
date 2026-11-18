@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-18T22:48:28.192370+00:00",
+  "browser": "Chromium headless",
+  "browser_version": "144.0.7559.96",
+  "results": [
+    {
+      "id": "CT-COMP01",
+      "description": "Chromium 1280x850, catálogo",
+      "status": "reprovado",
+      "detail": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:52293/\nCall log:\n  - navigating to \"http://127.0.0.1:52293/\", waiting until \"domcontentloaded\"\n"
+    },
+    {
+      "id": "CT-COMP02",
+      "description": "Chromium 390x850, catálogo",
+      "status": "reprovado",
+      "detail": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:52293/\nCall log:\n  - navigating to \"http://127.0.0.1:52293/\", waiting until \"domcontentloaded\"\n"
+    }
+  ]
+}

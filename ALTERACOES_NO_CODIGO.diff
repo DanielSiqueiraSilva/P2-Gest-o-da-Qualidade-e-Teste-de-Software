@@ -1,0 +1,620 @@
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/css/styles.css" codigo/public/css/styles.css
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/css/styles.css"	2026-11-18 22:33:35.102558490 +0000
++++ codigo/public/css/styles.css	2026-11-18 22:41:23.741232614 +0000
+@@ -238,3 +238,6 @@
+   box-shadow: none;
+   border-color: var(--line);
+ }
++
++.sr-only {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
++:focus-visible {outline:3px solid #ff7a00;outline-offset:3px;}
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/index.html" codigo/public/index.html
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/index.html"	2026-11-18 22:33:35.103068688 +0000
++++ codigo/public/index.html	2026-11-18 22:41:23.740721992 +0000
+@@ -12,6 +12,7 @@
+     <header class="site-header">
+       <a class="brand" href="#catalogo">Loja Aurora</a>
+       <div class="search-wrap">
++        <label for="search" class="sr-only">Buscar produtos</label>
+         <input id="search" type="search" placeholder="Buscar no catálogo" data-testid="search" autocomplete="off">
+       </div>
+       <nav class="nav" aria-label="Principal">
+@@ -31,7 +32,7 @@
+           <p>Material escolar, eletrônicos e acessórios para o dia a dia.</p>
+         </div>
+         <div id="catalog-toolbar" class="toolbar">
+-          <label>Categoria</label>
++          <label for="category-filter">Categoria</label>
+           <select id="category-filter" data-testid="category-filter">
+             <option value="">Todas</option>
+           </select>
+@@ -46,35 +47,35 @@
+         <div id="checkout-box" data-testid="checkout-box" hidden>
+           <h2>Cupom e entrega</h2>
+           <div class="inline-field">
+-            <label>Cupom</label>
+-            <input id="coupon-code" data-testid="coupon-code" placeholder="Código do cupom" autocomplete="off">
+-            <span class="button button-secondary" id="apply-coupon" data-testid="apply-coupon">Aplicar cupom</span>
++            <label for="coupon-code">Cupom</label>
++          <input id="coupon-code" data-testid="coupon-code" placeholder="Código do cupom" autocomplete="off">
++            <button type="button" class="button button-secondary" id="apply-coupon" data-testid="apply-coupon">Aplicar cupom</button>
+           </div>
+           <p id="coupon-feedback" class="feedback" data-testid="coupon-feedback"></p>
+           <div class="form-grid">
+             <div>
+-              <label>Rua</label>
+-              <input id="addr-street" data-testid="addr-street" placeholder="Rua" autocomplete="street-address">
++              <label for="addr-street">Rua</label>
++          <input id="addr-street" data-testid="addr-street" placeholder="Rua" autocomplete="street-address">
+             </div>
+             <div>
+-              <label>Número</label>
+-              <input id="addr-number" data-testid="addr-number" placeholder="Número">
++              <label for="addr-number">Número</label>
++          <input id="addr-number" data-testid="addr-number" placeholder="Número">
+             </div>
+             <div>
+-              <label>Bairro</label>
+-              <input id="addr-district" data-testid="addr-district" placeholder="Bairro">
++              <label for="addr-district">Bairro</label>
++          <input id="addr-district" data-testid="addr-district" placeholder="Bairro">
+             </div>
+             <div>
+-              <label>Cidade</label>
+-              <input id="addr-city" data-testid="addr-city" placeholder="Cidade">
++              <label for="addr-city">Cidade</label>
++          <input id="addr-city" data-testid="addr-city" placeholder="Cidade">
+             </div>
+             <div>
+-              <label>UF</label>
+-              <input id="addr-state" data-testid="addr-state" placeholder="UF" maxlength="2">
++              <label for="addr-state">UF</label>
++          <input id="addr-state" data-testid="addr-state" placeholder="UF" maxlength="2">
+             </div>
+             <div>
+-              <label>CEP</label>
+-              <input id="addr-zip" data-testid="addr-zip" placeholder="CEP" autocomplete="postal-code">
++              <label for="addr-zip">CEP</label>
++          <input id="addr-zip" data-testid="addr-zip" placeholder="CEP" autocomplete="postal-code">
+             </div>
+           </div>
+           <button type="button" id="checkout-button" class="button button-primary" data-testid="checkout-button">Finalizar pedido</button>
+@@ -93,12 +94,12 @@
+         <h1>Entrar</h1>
+         <form id="login-form" class="panel">
+           <div>
+-            <label>E-mail</label>
+-            <input id="login-email" data-testid="login-email" placeholder="E-mail" autocomplete="username">
++            <label for="login-email">E-mail</label>
++          <input id="login-email" data-testid="login-email" placeholder="E-mail" autocomplete="username">
+           </div>
+           <div>
+-            <label>Senha</label>
+-            <input id="login-password" data-testid="login-password" type="password" placeholder="Senha" autocomplete="current-password">
++            <label for="login-password">Senha</label>
++          <input id="login-password" data-testid="login-password" type="password" placeholder="Senha" autocomplete="current-password">
+           </div>
+           <button type="submit" class="button button-primary">Entrar</button>
+           <p id="login-error" class="feedback" data-testid="login-error"></p>
+@@ -110,16 +111,16 @@
+         <h1>Cadastro</h1>
+         <form id="register-form" class="panel">
+           <div>
+-            <label>Nome</label>
+-            <input id="register-name" data-testid="register-name" placeholder="Nome" autocomplete="name">
++            <label for="register-name">Nome</label>
++          <input id="register-name" data-testid="register-name" placeholder="Nome" autocomplete="name">
+           </div>
+           <div>
+-            <label>E-mail</label>
+-            <input id="register-email" data-testid="register-email" placeholder="E-mail" autocomplete="email">
++            <label for="register-email">E-mail</label>
++          <input id="register-email" data-testid="register-email" placeholder="E-mail" autocomplete="email">
+           </div>
+           <div>
+-            <label>Senha</label>
+-            <input id="register-password" data-testid="register-password" type="password" placeholder="Senha" autocomplete="new-password">
++            <label for="register-password">Senha</label>
++          <input id="register-password" data-testid="register-password" type="password" placeholder="Senha" autocomplete="new-password">
+           </div>
+           <button type="submit" class="button button-primary">Criar conta</button>
+           <p id="register-error" class="feedback" data-testid="register-error"></p>
+@@ -133,16 +134,16 @@
+         <h2>Novo produto</h2>
+         <form id="new-product-form" class="panel">
+           <div>
+-            <label>Nome</label>
+-            <input id="new-product-name" data-testid="new-product-name">
++            <label for="new-product-name">Nome</label>
++          <input id="new-product-name" data-testid="new-product-name">
+           </div>
+           <div>
+-            <label>Preço</label>
+-            <input id="new-product-price" data-testid="new-product-price">
++            <label for="new-product-price">Preço</label>
++          <input id="new-product-price" data-testid="new-product-price">
+           </div>
+           <div>
+-            <label>Estoque</label>
+-            <input id="new-product-stock" data-testid="new-product-stock">
++            <label for="new-product-stock">Estoque</label>
++          <input id="new-product-stock" data-testid="new-product-stock">
+           </div>
+           <button type="submit" class="button button-primary">Cadastrar produto</button>
+           <p id="new-product-error" class="feedback"></p>
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/admin.js" codigo/public/js/admin.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/admin.js"	2026-11-18 22:33:35.103322410 +0000
++++ codigo/public/js/admin.js	2026-11-18 22:48:07.468828225 +0000
+@@ -11,8 +11,8 @@
+     row.dataset.productId = product.id;
+     row.innerHTML = `
+       <h2>${Aurora.escapeHtml(product.name)}</h2>
+-      <input name="price" type="number" step="0.01" value="${product.price}">
+-      <input name="stock" type="number" step="1" value="${product.stock}">
++      <input name="price" aria-label="Preço de ${Aurora.escapeHtml(product.name)}" type="number" step="0.01" value="${product.price}">
++      <input name="stock" aria-label="Estoque de ${Aurora.escapeHtml(product.name)}" type="number" step="1" value="${product.stock}">
+       <button type="submit" class="button button-secondary">Salvar</button>
+     `;
+     row.addEventListener("submit", async (event) => {
+@@ -44,7 +44,9 @@
+   try {
+     products = await Aurora.api.get("/api/admin/products");
+   } catch (error) {
+-    products = await Aurora.api.get("/api/products");
++    status.textContent = error.message;
++    document.getElementById("admin-products").replaceChildren();
++    return;
+   }
+   renderAdminProducts(products);
+ 
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/auth.js" codigo/public/js/auth.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/auth.js"	2026-11-18 22:33:35.103772307 +0000
++++ codigo/public/js/auth.js	2026-11-18 22:41:23.741083048 +0000
+@@ -17,7 +17,7 @@
+   chip.textContent = `Olá, ${Aurora.state.user.name}`;
+   login.hidden = true;
+   logout.hidden = false;
+-  admin.hidden = false;
++  admin.hidden = Aurora.state.user.role !== "admin";
+ }
+ 
+ Aurora.renderSession = renderSession;
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/cart.js" codigo/public/js/cart.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/cart.js"	2026-11-18 22:33:35.104039490 +0000
++++ codigo/public/js/cart.js	2026-11-18 22:48:07.468567893 +0000
+@@ -60,7 +60,7 @@
+   document.getElementById("coupon-code").value = Aurora.state.couponCode || "";
+ 
+   if (Aurora.state.cart.length === 0) {
+-    root.innerHTML = "";
++    root.innerHTML = "<p>Seu carrinho está vazio. <a href=\"#catalogo\">Voltar ao catálogo</a>.</p>";
+     checkout.hidden = Aurora.state.receipt === null;
+     Aurora.state.quote = null;
+     renderReceipt();
+@@ -93,7 +93,7 @@
+         <strong>${Aurora.escapeHtml(item.name)}</strong>
+         <div>${Aurora.formatBRL(item.lineTotal)}</div>
+       </div>
+-      <input data-qty="true" data-product-id="${item.productId}" type="number" step="1" value="${item.quantity}" placeholder="Qtd">
++      <input data-qty="true" data-product-id="${item.productId}" aria-label="Quantidade de ${Aurora.escapeHtml(item.name)}" type="number" step="1" value="${item.quantity}" placeholder="Qtd">
+       <button type="button" class="button button-quiet" data-remove="${item.productId}">Remover</button>
+     </div>
+   `).join("");
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/catalog.js" codigo/public/js/catalog.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/catalog.js"	2026-11-18 22:33:35.104289145 +0000
++++ codigo/public/js/catalog.js	2026-11-18 22:49:44.313781367 +0000
+@@ -40,7 +40,8 @@
+   stock.className = "stock";
+   stock.textContent = `Estoque: ${product.stock}`;
+ 
+-  const add = document.createElement("div");
++  const add = document.createElement("button");
++  add.type = "button";
+   add.className = "button button-primary";
+   add.dataset.testid = "add-to-cart";
+   add.dataset.productId = product.id;
+@@ -54,20 +55,24 @@
+ Aurora.renderCatalog = function renderCatalog() {
+   const term = document.getElementById("search").value.trim().toLowerCase();
+   const category = document.getElementById("category-filter").value;
+-  const grid = document.getElementById("catalog-grid");
+-  grid.replaceChildren();
++  const cards = document.getElementById("catalog-grid").children;
++  for (const card of cards) {
++    card.hidden = Boolean((term && !card.dataset.search.includes(term)) ||
++      (category && card.dataset.category !== category));
++  }
++};
+ 
++Aurora.buildCatalog = function buildCatalog() {
++  const grid = document.getElementById("catalog-grid");
++  const fragment = document.createDocumentFragment();
+   for (const product of Aurora.state.products) {
+     const card = buildCard(product);
+-    const matchesTerm = !term || `${product.name} ${product.category} ${product.description}`.toLowerCase().includes(term);
+-    const matchesCategory = !category || product.category === category;
+-    card.hidden = !(matchesTerm && matchesCategory);
+-    grid.appendChild(card);
++    card.dataset.search = `${product.name} ${product.category} ${product.description}`.toLowerCase();
++    card.dataset.category = product.category;
++    fragment.appendChild(card);
+   }
+-
+-  document.getElementById("refresh-catalog").addEventListener("click", () => {
+-    Aurora.loadCatalog();
+-  });
++  grid.replaceChildren(fragment);
++  Aurora.renderCatalog();
+ };
+ 
+ let catalogToken = 0;
+@@ -89,13 +94,16 @@
+   if (token !== catalogToken) return;
+   Aurora.state.products = products;
+   fillCategories(products);
+-  Aurora.renderCatalog();
++  Aurora.buildCatalog();
+ };
+ 
+ Aurora.initCatalog = function initCatalog() {
++  let searchDebounce;
+   document.getElementById("search").addEventListener("input", () => {
+-    Aurora.loadCatalog();
++    clearTimeout(searchDebounce);
++    searchDebounce = setTimeout(() => Aurora.renderCatalog(), 180);
+   });
++  document.getElementById("refresh-catalog").addEventListener("click", () => Aurora.loadCatalog());
+   document.getElementById("category-filter").addEventListener("change", () => {
+     Aurora.renderCatalog();
+   });
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/main.js" codigo/public/js/main.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/main.js"	2026-11-18 22:33:35.104715487 +0000
++++ codigo/public/js/main.js	2026-11-18 22:41:23.740884879 +0000
+@@ -39,7 +39,4 @@
+   if (!location.hash) location.hash = "#catalogo";
+   Aurora.applyRoute();
+   window.addEventListener("hashchange", () => Aurora.applyRoute());
+-  setInterval(() => {
+-    fetch("/api/products").catch(() => {});
+-  }, 2000);
+ });
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/orders.js" codigo/public/js/orders.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/public/js/orders.js"	2026-11-18 22:33:35.104937191 +0000
++++ codigo/public/js/orders.js	2026-11-18 22:41:23.740990689 +0000
+@@ -46,10 +46,7 @@
+   }
+ 
+   status.textContent = "Carregando pedidos...";
+-  let orders = [];
+-  for (let attempt = 0; attempt < 8; attempt += 1) {
+-    orders = await Aurora.api.get("/api/orders");
+-  }
++  const orders = await Aurora.api.get("/api/orders");
+ 
+   list.innerHTML = "";
+   if (orders.length === 0) {
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/address.js" codigo/src/domain/address.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/address.js"	2026-11-18 22:33:35.107376152 +0000
++++ codigo/src/domain/address.js	2026-11-18 22:41:23.740178441 +0000
+@@ -1,17 +1,12 @@
+ "use strict";
+-
+-const FIELDS = ["street", "number", "district", "city", "state", "zip"];
+-
+-function normalizeAddress(input) {
+-  const source = input && typeof input === "object" ? input : {};
+-  const address = {};
+-  for (const field of FIELDS) {
+-    address[field] = String(source[field] ?? "").trim();
+-  }
+-  return { ok: true, address };
++const FIELDS=["street","number","district","city","state","zip"];
++function normalizeAddress(input){
++ const source=input && typeof input==="object" ? input : {};
++ const address={};
++ for(const field of FIELDS) address[field]=String(source[field]??"").trim();
++ if(FIELDS.some((field)=>!address[field]))return {ok:false,message:"Preencha o endereço de entrega completo."};
++ if(!/^[A-Za-z]{2}$/.test(address.state)|| !/^\d{5}-?\d{3}$/.test(address.zip)) return {ok:false,message:"UF ou CEP inválido."};
++ address.state=address.state.toUpperCase();
++ return {ok:true,address};
+ }
+-
+-module.exports = {
+-  normalizeAddress,
+-  FIELDS,
+-};
++module.exports={normalizeAddress,FIELDS};
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/coupon.js" codigo/src/domain/coupon.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/coupon.js"	2026-11-18 22:33:35.107982655 +0000
++++ codigo/src/domain/coupon.js	2026-11-18 22:41:23.740152802 +0000
+@@ -1,31 +1,21 @@
+ "use strict";
+-
++const { now } = require("./clock");
+ const { toCents, fromCents, percentOf } = require("./money");
+-
+ function evaluateCoupon(coupon) {
+-  if (!coupon || coupon.active === false) {
+-    return { ok: false, message: "Cupom inválido." };
++  if (!coupon || coupon.active === false || !["percent", "fixed"].includes(coupon.type) || !Number.isFinite(Number(coupon.value)) || Number(coupon.value)<0) {
++    return {ok:false,message:"Cupom inválido."};
+   }
+-  return { ok: true };
+-}
+-
+-function couponBenefit(subtotal, coupon) {
+-  if (!coupon) return 0;
+-
+-  if (coupon.type === "percent") {
+-    return percentOf(subtotal, coupon.value);
+-  }
+-
+-  if (coupon.type === "fixed") {
+-    const benefitCents = toCents(coupon.value);
+-    const subtotalCents = toCents(subtotal);
+-    return fromCents(Math.min(benefitCents, subtotalCents));
++  if (coupon.expiresAt) {
++    const stamp=String(coupon.expiresAt);
++    const expiry=stamp.length===10 ? new Date(stamp+"T23:59:59.999Z") : new Date(stamp);
++    if (Number.isNaN(expiry.getTime()) || now().getTime()>expiry.getTime()) return {ok:false,message:"Cupom vencido ou inválido."};
+   }
+-
+-  return 0;
++  return {ok:true};
++}
++function couponBenefit(subtotal,coupon){
++ if(!coupon) return 0;
++ if(coupon.type==="percent") return percentOf(subtotal,coupon.value);
++ if(coupon.type==="fixed") return fromCents(Math.min(toCents(coupon.value),toCents(subtotal)));
++ return 0;
+ }
+-
+-module.exports = {
+-  evaluateCoupon,
+-  couponBenefit,
+-};
++module.exports={evaluateCoupon,couponBenefit};
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/discount.js" codigo/src/domain/discount.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/discount.js"	2026-11-18 22:33:35.108194353 +0000
++++ codigo/src/domain/discount.js	2026-11-18 22:41:23.739550481 +0000
+@@ -6,7 +6,7 @@
+ const AUTO_DISCOUNT_PERCENT = 10;
+ 
+ function automaticDiscount(subtotal) {
+-  if (!(Number(subtotal) > AUTO_DISCOUNT_MIN_SUBTOTAL)) {
++  if (!(Number(subtotal) >= AUTO_DISCOUNT_MIN_SUBTOTAL)) {
+     return 0;
+   }
+   return percentOf(subtotal, AUTO_DISCOUNT_PERCENT);
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/money.js" codigo/src/domain/money.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/money.js"	2026-11-18 22:33:35.108527365 +0000
++++ codigo/src/domain/money.js	2026-11-18 22:41:23.740091549 +0000
+@@ -10,7 +10,7 @@
+ 
+ function percentOf(amount, percent) {
+   const cents = toCents(amount);
+-  const resultCents = Math.trunc((cents * Number(percent)) / 100);
++  const resultCents = Math.round((cents * Number(percent)) / 100 + Number.EPSILON);
+   return fromCents(resultCents);
+ }
+ 
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/orderTotals.js" codigo/src/domain/orderTotals.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/orderTotals.js"	2026-11-18 22:33:35.108742288 +0000
++++ codigo/src/domain/orderTotals.js	2026-11-18 22:41:23.740127564 +0000
+@@ -10,7 +10,7 @@
+     subtotal,
+     discount,
+     shipping,
+-    total: fromCents(toCents(subtotal) + toCents(shipping)),
++    total: fromCents(toCents(subtotal) - toCents(discount) + toCents(shipping)),
+   };
+ }
+ 
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/quantity.js" codigo/src/domain/quantity.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/quantity.js"	2026-11-18 22:33:35.109217473 +0000
++++ codigo/src/domain/quantity.js	2026-11-18 22:41:23.740041454 +0000
+@@ -10,8 +10,8 @@
+     return { ok: false, message: "A quantidade deve ser um número inteiro." };
+   }
+ 
+-  if (value === 0) {
+-    return { ok: false, message: "A quantidade não pode ser zero." };
++  if (value <= 0) {
++    return { ok: false, message: "A quantidade deve ser positiva." };
+   }
+ 
+   return { ok: true, quantity: value };
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/shipping.js" codigo/src/domain/shipping.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/domain/shipping.js"	2026-11-18 22:33:35.109421961 +0000
++++ codigo/src/domain/shipping.js	2026-11-18 22:41:23.739948693 +0000
+@@ -7,8 +7,7 @@
+ 
+ function shippingCost(productSubtotal) {
+   const cents = toCents(productSubtotal);
+-  const considered = Math.trunc((cents * 9) / 10);
+-  if (considered >= toCents(FREE_SHIPPING_MIN_SUBTOTAL)) {
++  if (cents >= toCents(FREE_SHIPPING_MIN_SUBTOTAL)) {
+     return 0;
+   }
+   return fromCents(toCents(SHIPPING_FEE));
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/persistence/database.js" codigo/src/persistence/database.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/persistence/database.js"	2026-11-18 22:33:35.109864798 +0000
++++ codigo/src/persistence/database.js	2026-11-18 22:41:23.740245893 +0000
+@@ -10,15 +10,9 @@
+   }
+ 
+   function persist() {
+-    const onDisk = readFile(filePath);
+-    const next = {
+-      users: state.users,
+-      products: state.products,
+-      coupons: state.coupons,
+-      sessions: state.sessions,
+-      orders: onDisk.orders,
+-    };
+-    fs.writeFileSync(filePath, JSON.stringify(next, null, 2));
++    const temporary = `${filePath}.tmp`;
++    fs.writeFileSync(temporary, JSON.stringify(state, null, 2));
++    fs.renameSync(temporary, filePath);
+   }
+ 
+   function publicUser(user) {
+@@ -111,10 +105,11 @@
+ 
+     addOrder(order) {
+       state.orders.push(order);
++      persist();
+     },
+ 
+     listOrders() {
+-      return readFile(filePath).orders.map((order) => ({
++      return state.orders.map((order) => ({
+         ...order,
+         items: order.items.map((item) => ({ ...item })),
+         address: { ...order.address },
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/routes/api.js" codigo/src/routes/api.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/routes/api.js"	2026-11-18 22:33:35.110141905 +0000
++++ codigo/src/routes/api.js	2026-11-18 22:41:23.740395659 +0000
+@@ -63,9 +63,10 @@
+   const password = String(body.password || "");
+   const emailOk = EMAIL_PATTERN.test(email);
+   const duplicate = users.some((user) => user.email === email);
+-  if (name.length < 3 || !emailOk || password.length < 6 || duplicate) {
+-    return { ok: false };
+-  }
++  if (name.length < 3) return {ok:false,error:"Nome deve ter pelo menos 3 caracteres."};
++  if (!emailOk) return {ok:false,error:"E-mail inválido."};
++  if (password.length < 6) return {ok:false,error:"Senha deve ter pelo menos 6 caracteres."};
++  if (duplicate) return {ok:false,error:"E-mail já cadastrado."};
+   return { ok: true, name, email, password };
+ }
+ 
+@@ -88,7 +89,7 @@
+   if (method === "POST" && path === "/api/auth/register") {
+     const result = canRegister(body, db.listUsers());
+     if (!result.ok) {
+-      send(res, 400, { error: "Dados inválidos" });
++      send(res, 400, { error: result.error });
+       return;
+     }
+     const created = db.addUser({
+@@ -160,6 +161,9 @@
+         send(res, 400, { error: "Produto não encontrado." });
+         return;
+       }
++      if (!hasAvailableStock(Number(item.quantity),product.stock)) {
++        send(res,400,{error:"Quantidade inválida ou estoque insuficiente."});return;
++      }
+       lines.push({
+         productId: product.id,
+         name: product.name,
+@@ -216,7 +220,7 @@
+       return;
+     }
+     const order = db.findOrder(decodeURIComponent(orderMatch[1]));
+-    if (!order) {
++    if (!order || order.userId !== user.id) {
+       send(res, 404, { error: "Pedido não encontrado." });
+       return;
+     }
+@@ -281,6 +285,8 @@
+ 
+   const adminProductMatch = path.match(/^\/api\/admin\/products\/([^/]+)$/);
+   if (method === "PUT" && adminProductMatch) {
++    if (!user) {send(res,401,{error:"Autenticação necessária."});return;}
++    if (user.role!=="admin") {send(res,403,{error:"Acesso restrito a administradores."});return;}
+     const productId = decodeURIComponent(adminProductMatch[1]);
+     const current = db.findProduct(productId);
+     if (!current) {
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/services/checkout.js" codigo/src/services/checkout.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/services/checkout.js"	2026-11-18 22:33:35.110463919 +0000
++++ codigo/src/services/checkout.js	2026-11-18 22:48:07.468264516 +0000
+@@ -9,22 +9,14 @@
+ const CHECKOUT_WINDOW_MS = 5000;
+ 
+ function fingerprint(userId, body) {
+-  const items = (body.items || [])
+-    .map((item) => `${item.productId}:${item.quantity}:${item.unitPrice ?? ""}`)
++  const items = (Array.isArray(body.items) ? body.items : [])
++    .map((item) => `${item.productId}:${item.quantity}`)
+     .sort()
+     .join(",");
+   const address = JSON.stringify(body.address || {});
+   return `${userId}|${items}|${body.couponCode || ""}|${address}`;
+ }
+ 
+-function resolveUnitPrice(product, requested) {
+-  if (requested !== undefined && requested !== null && requested !== "") {
+-    const price = Number(requested);
+-    if (Number.isFinite(price)) return price;
+-  }
+-  return Number(product.price);
+-}
+-
+ function placeOrder(db, user, body) {
+   const key = fingerprint(user.id, body || {});
+   const previous = recentCheckouts.get(key);
+@@ -41,7 +33,10 @@
+       return { ok: false, status: 400, error: "Produto não encontrado." };
+     }
+ 
+-    const unitPrice = resolveUnitPrice(product, item.unitPrice);
++    if (!Number.isInteger(Number(item.quantity)) || Number(item.quantity)<=0 || Number(item.quantity)>Number(product.stock)) {
++      return {ok:false,status:400,error:"Quantidade inválida ou estoque insuficiente."};
++    }
++    const unitPrice = Number(product.price);
+     lines.push({
+       productId: product.id,
+       name: product.name,
+@@ -64,6 +59,7 @@
+   }
+ 
+   const addressResult = normalizeAddress(body.address);
++  if (!addressResult.ok) return {ok:false,status:400,error:addressResult.message};
+   const totals = totalsForOrder(quote);
+   const order = {
+     id: db.nextOrderId(),
+@@ -80,6 +76,10 @@
+     status: "confirmado",
+   };
+ 
++  for (const item of quote.items) {
++    const product=db.findProduct(item.productId);
++    db.updateProduct(item.productId, {stock:Number(product.stock)-item.quantity});
++  }
+   db.addOrder(order);
+ 
+   const result = { ok: true, status: 201, order };
+diff -ru -x data -x tests -x .gitignore "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/services/orderHistory.js" codigo/src/services/orderHistory.js
+--- "/mnt/data/_rar_review/E-COMERCE TESTE DE SOFTWARE/alunos/src/services/orderHistory.js"	2026-11-18 22:33:35.110680555 +0000
++++ codigo/src/services/orderHistory.js	2026-11-18 22:41:23.740435419 +0000
+@@ -1,23 +1,8 @@
+ "use strict";
+-
+-function listVisibleOrders(db, userId) {
+-  const owned = db.listOrders().filter((order) => order.userId === userId);
+-  return owned.map((order) => {
+-    const items = order.items.map((item) => {
+-      let quantitySoldToCustomer = 0;
+-      for (const current of owned) {
+-        for (const candidate of current.items) {
+-          if (candidate.productId === item.productId) {
+-            quantitySoldToCustomer += Number(candidate.quantity) || 0;
+-          }
+-        }
+-      }
+-      return { ...item, quantitySoldToCustomer };
+-    });
+-    return { ...order, items };
+-  });
++function listVisibleOrders(db,userId){
++ const owned=db.listOrders().filter(order=>order.userId===userId);
++ const sums=new Map();
++ for(const order of owned)for(const item of order.items)sums.set(item.productId,(sums.get(item.productId)||0)+Number(item.quantity||0));
++ return owned.map(order=>({...order,items:order.items.map(item=>({...item,quantitySoldToCustomer:sums.get(item.productId)||0}))}));
+ }
+-
+-module.exports = {
+-  listVisibleOrders,
+-};
++module.exports={listVisibleOrders};

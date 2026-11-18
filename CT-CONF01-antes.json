@@ -1,0 +1,41 @@
+{
+  "stage": "ANTES",
+  "date": "2026-11-18T22:40:33.364Z",
+  "cases": [
+    {
+      "id": "BUG-01",
+      "rule": "RN-01 desconto no limiar de R$200",
+      "expected": 20,
+      "obtained": 0,
+      "pass": false
+    },
+    {
+      "id": "BUG-02",
+      "rule": "RN-02 frete no limiar de R$300",
+      "expected": 0,
+      "obtained": 18.5,
+      "pass": false
+    },
+    {
+      "id": "BUG-03",
+      "rule": "RN-03 quantidade negativa",
+      "expected": false,
+      "obtained": true,
+      "pass": false
+    },
+    {
+      "id": "BUG-04",
+      "rule": "RN-04 cupom vencido",
+      "expected": false,
+      "obtained": true,
+      "pass": false
+    },
+    {
+      "id": "BUG-05",
+      "rule": "RN-06 arredondamento half-up",
+      "expected": 20.01,
+      "obtained": 20,
+      "pass": false
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+CT-COMP01 reprovado Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:52293/
+Call log:
+  - navigating to "http://127.0.0.1:52293/", waiting until "domcontentloaded"
+
+CT-COMP02 reprovado Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:52293/
+Call log:
+  - navigating to "http://127.0.0.1:52293/", waiting until "domcontentloaded"
+

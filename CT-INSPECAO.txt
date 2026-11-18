@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: CT-US01 / checklist rótulo Nome associado
+ok 1 - CT-US01 / checklist rótulo Nome associado
+  ---
+  duration_ms: 0.801368
+  type: 'test'
+  ...
+# Subtest: CT-US02 / checklist controles primários são buttons nativos
+ok 2 - CT-US02 / checklist controles primários são buttons nativos
+  ---
+  duration_ms: 0.277889
+  type: 'test'
+  ...
+# Subtest: CT-US03 / checklist foco visível por CSS
+ok 3 - CT-US03 / checklist foco visível por CSS
+  ---
+  duration_ms: 0.129886
+  type: 'test'
+  ...
+# Subtest: CT-US04 / checklist erro identifica campo de cadastro
+ok 4 - CT-US04 / checklist erro identifica campo de cadastro
+  ---
+  duration_ms: 0.102815
+  type: 'test'
+  ...
+# Subtest: CT-US05 / checklist carrinho vazio apresenta instrução e link
+ok 5 - CT-US05 / checklist carrinho vazio apresenta instrução e link
+  ---
+  duration_ms: 0.140381
+  type: 'test'
+  ...
+# Subtest: CT-F04 / RF-04 busca filtra produtos pelo texto sem recriar cartões
+ok 6 - CT-F04 / RF-04 busca filtra produtos pelo texto sem recriar cartões
+  ---
+  duration_ms: 2.536943
+  type: 'test'
+  ...
+# Subtest: CT-F04B / RF-04 filtro de categoria restringe catálogo
+ok 7 - CT-F04B / RF-04 filtro de categoria restringe catálogo
+  ---
+  duration_ms: 0.579734
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 62.144698

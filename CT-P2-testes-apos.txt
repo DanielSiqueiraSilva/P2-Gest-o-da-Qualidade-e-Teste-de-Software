@@ -1,0 +1,244 @@
+TAP version 13
+# Subtest: CT-F01 / RF-01 cadastro com dados fictícios
+ok 1 - CT-F01 / RF-01 cadastro com dados fictícios
+  ---
+  duration_ms: 242.031916
+  type: 'test'
+  ...
+# Subtest: CT-F02 / RF-02 autenticação e sessão
+ok 2 - CT-F02 / RF-02 autenticação e sessão
+  ---
+  duration_ms: 2.411632
+  type: 'test'
+  ...
+# Subtest: CT-F03 / RF-03 catálogo contém atributos
+ok 3 - CT-F03 / RF-03 catálogo contém atributos
+  ---
+  duration_ms: 8.66579
+  type: 'test'
+  ...
+# Subtest: CT-F04 / RF-04 busca e categoria na UI são verificadas na suite E2E
+ok 4 - CT-F04 / RF-04 busca e categoria na UI são verificadas na suite E2E
+  ---
+  duration_ms: 6.359726
+  type: 'test'
+  ...
+# Subtest: CT-F05 / RF-05 cotação com duas unidades
+ok 5 - CT-F05 / RF-05 cotação com duas unidades
+  ---
+  duration_ms: 2.938525
+  type: 'test'
+  ...
+# Subtest: CT-F06 / RF-06 estoque consultável
+ok 6 - CT-F06 / RF-06 estoque consultável
+  ---
+  duration_ms: 2.395567
+  type: 'test'
+  ...
+# Subtest: CT-F07 / RF-07 cupom VINTE prevalece sobre automático
+ok 7 - CT-F07 / RF-07 cupom VINTE prevalece sobre automático
+  ---
+  duration_ms: 2.368927
+  type: 'test'
+  ...
+# Subtest: CT-F08 / RF-08 endereço obrigatório (negativo)
+ok 8 - CT-F08 / RF-08 endereço obrigatório (negativo)
+  ---
+  duration_ms: 2.252772
+  type: 'test'
+  ...
+# Subtest: CT-F09 / RF-09 finalizar pedido com endereço e persistência
+ok 9 - CT-F09 / RF-09 finalizar pedido com endereço e persistência
+  ---
+  duration_ms: 46.840234
+  type: 'test'
+  ...
+# Subtest: CT-I01 / RF-06,RF-09 estoque alterado após compra e persistido
+ok 10 - CT-I01 / RF-06,RF-09 estoque alterado após compra e persistido
+  ---
+  duration_ms: 14.419634
+  type: 'test'
+  ...
+# Subtest: CT-I02 / RF-09,RF-10 pedido criado recuperável pela API
+ok 11 - CT-I02 / RF-09,RF-10 pedido criado recuperável pela API
+  ---
+  duration_ms: 5.714254
+  type: 'test'
+  ...
+# Subtest: CT-F10 / RF-10 histórico de pedidos próprios
+ok 12 - CT-F10 / RF-10 histórico de pedidos próprios
+  ---
+  duration_ms: 1.580631
+  type: 'test'
+  ...
+# Subtest: CT-N01 / RN-03 cotação negativa rejeitada
+ok 13 - CT-N01 / RN-03 cotação negativa rejeitada
+  ---
+  duration_ms: 1.578186
+  type: 'test'
+  ...
+# Subtest: CT-N02 / RN-03 acima do estoque rejeitado
+ok 14 - CT-N02 / RN-03 acima do estoque rejeitado
+  ---
+  duration_ms: 1.350293
+  type: 'test'
+  ...
+# Subtest: CT-N03 / RN-04 cupom vencido rejeitado
+ok 15 - CT-N03 / RN-04 cupom vencido rejeitado
+  ---
+  duration_ms: 1.337334
+  type: 'test'
+  ...
+# Subtest: CT-S01 / RN-10 cliente B não acessa pedido A
+ok 16 - CT-S01 / RN-10 cliente B não acessa pedido A
+  ---
+  duration_ms: 1.410434
+  type: 'test'
+  ...
+# Subtest: CT-S02 / RN-11 alteração administrativa sem token rejeitada
+ok 17 - CT-S02 / RN-11 alteração administrativa sem token rejeitada
+  ---
+  duration_ms: 1.245977
+  type: 'test'
+  ...
+# Subtest: CT-S03 / RN-11 alteração administrativa com cliente rejeitada
+ok 18 - CT-S03 / RN-11 alteração administrativa com cliente rejeitada
+  ---
+  duration_ms: 1.325887
+  type: 'test'
+  ...
+# Subtest: CT-S04 / RN-12 entrada administrativa negativa rejeitada
+ok 19 - CT-S04 / RN-12 entrada administrativa negativa rejeitada
+  ---
+  duration_ms: 1.230533
+  type: 'test'
+  ...
+# Subtest: CT-R01 / RN-09 repetição imediata não cria dois pedidos
+ok 20 - CT-R01 / RN-09 repetição imediata não cria dois pedidos
+  ---
+  duration_ms: 26.058631
+  type: 'test'
+  ...
+# Subtest: CT-R02 / RN-12 preço enviado pelo navegador não altera cálculo
+ok 21 - CT-R02 / RN-12 preço enviado pelo navegador não altera cálculo
+  ---
+  duration_ms: 1.20163
+  type: 'test'
+  ...
+# Subtest: CT-R03 / RN-10 histórico não expõe pedidos de outro cliente
+ok 22 - CT-R03 / RN-10 histórico não expõe pedidos de outro cliente
+  ---
+  duration_ms: 2.378432
+  type: 'test'
+  ...
+# Subtest: CT-CP01 / caixa-preta equivalência + valor-limite do desconto (199,99/200/200,01)
+ok 23 - CT-CP01 / caixa-preta equivalência + valor-limite do desconto (199,99/200/200,01)
+  ---
+  duration_ms: 54.602143
+  type: 'test'
+  ...
+# Subtest: CT-CP02 / caixa-preta equivalência + valor-limite do frete (299,99/300/300,01)
+ok 24 - CT-CP02 / caixa-preta equivalência + valor-limite do frete (299,99/300/300,01)
+  ---
+  duration_ms: 54.564787
+  type: 'test'
+  ...
+# Subtest: CT-U01 / RN-01 equivalência: R$199,99 não recebe desconto
+ok 25 - CT-U01 / RN-01 equivalência: R$199,99 não recebe desconto
+  ---
+  duration_ms: 1.538627
+  type: 'test'
+  ...
+# Subtest: CT-U02 / RN-01 limite: R$200,00 recebe R$20
+ok 26 - CT-U02 / RN-01 limite: R$200,00 recebe R$20
+  ---
+  duration_ms: 0.174592
+  type: 'test'
+  ...
+# Subtest: CT-U03 / RN-01 acima do limite: R$200,01
+ok 27 - CT-U03 / RN-01 acima do limite: R$200,01
+  ---
+  duration_ms: 0.090967
+  type: 'test'
+  ...
+# Subtest: CT-U04 / RN-02 frete: R$299,99 custa R$18,50
+ok 28 - CT-U04 / RN-02 frete: R$299,99 custa R$18,50
+  ---
+  duration_ms: 0.112219
+  type: 'test'
+  ...
+# Subtest: CT-U05 / RN-02 frete: R$300,00 gratuito
+ok 29 - CT-U05 / RN-02 frete: R$300,00 gratuito
+  ---
+  duration_ms: 0.185329
+  type: 'test'
+  ...
+# Subtest: CT-U06 / RN-03 equivalência inválida negativa
+ok 30 - CT-U06 / RN-03 equivalência inválida negativa
+  ---
+  duration_ms: 0.315585
+  type: 'test'
+  ...
+# Subtest: CT-U07 / RN-03 valor-limite zero
+ok 31 - CT-U07 / RN-03 valor-limite zero
+  ---
+  duration_ms: 0.260763
+  type: 'test'
+  ...
+# Subtest: CT-U08 / RN-03 valor-limite inteiro mínimo 1
+ok 32 - CT-U08 / RN-03 valor-limite inteiro mínimo 1
+  ---
+  duration_ms: 0.130076
+  type: 'test'
+  ...
+# Subtest: CT-U09 / RN-06 arredondamento monetário meio centavo half-up
+ok 33 - CT-U09 / RN-06 arredondamento monetário meio centavo half-up
+  ---
+  duration_ms: 0.374694
+  type: 'test'
+  ...
+# Subtest: CT-U10 / RN-04 cupom vencido rejeitado
+ok 34 - CT-U10 / RN-04 cupom vencido rejeitado
+  ---
+  duration_ms: 0.838623
+  type: 'test'
+  ...
+# Subtest: CT-U11 / RN-04 cupom válido até fim do dia
+ok 35 - CT-U11 / RN-04 cupom válido até fim do dia
+  ---
+  duration_ms: 0.261093
+  type: 'test'
+  ...
+# Subtest: CT-U12 / RN-05 maior desconto, não cumulativo
+ok 36 - CT-U12 / RN-05 maior desconto, não cumulativo
+  ---
+  duration_ms: 0.438581
+  type: 'test'
+  ...
+# Subtest: CT-U13 / RN-06 total do pedido desconta benefício
+ok 37 - CT-U13 / RN-06 total do pedido desconta benefício
+  ---
+  duration_ms: 0.107982
+  type: 'test'
+  ...
+# Subtest: CT-U14 / RN-13 endereço incompleto é recusado
+ok 38 - CT-U14 / RN-13 endereço incompleto é recusado
+  ---
+  duration_ms: 0.134552
+  type: 'test'
+  ...
+# Subtest: CT-U15 / RN-06 cotação R$300 frete zero
+ok 39 - CT-U15 / RN-06 cotação R$300 frete zero
+  ---
+  duration_ms: 0.609849
+  type: 'test'
+  ...
+1..39
+# tests 39
+# suites 0
+# pass 39
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 602.791508

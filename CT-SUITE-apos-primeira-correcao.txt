@@ -1,0 +1,92 @@
+
+> loja-aurora@1.0.0 test
+> node scripts/test.js
+
+TAP version 13
+# Subtest: importação preserva contagens, relações, totais e estoque
+ok 1 - importação preserva contagens, relações, totais e estoque
+  ---
+  duration_ms: 7744.079732
+  type: 'test'
+  ...
+# Subtest: as três contas locais entram com a senha de teste e as demais não
+ok 2 - as três contas locais entram com a senha de teste e as demais não
+  ---
+  duration_ms: 136.52678
+  type: 'test'
+  ...
+# Subtest: reset grava a mesma base duas vezes e não altera o dataset
+ok 3 - reset grava a mesma base duas vezes e não altera o dataset
+  ---
+  duration_ms: 15553.137935
+  type: 'test'
+  ...
+# Subtest: relógio fixo distingue cupom vencido e cupom válido
+ok 4 - relógio fixo distingue cupom vencido e cupom válido
+  ---
+  duration_ms: 0.766271
+  type: 'test'
+  ...
+# Subtest: cupom e desconto automático não se acumulam
+ok 5 - cupom e desconto automático não se acumulam
+  ---
+  duration_ms: 0.897547
+  type: 'test'
+  ...
+# Subtest: subtotal de R$ 250 recebe 10% de desconto automático
+ok 6 - subtotal de R$ 250 recebe 10% de desconto automático
+  ---
+  duration_ms: 0.625346
+  type: 'test'
+  ...
+# Subtest: subtotal de R$ 100 paga frete
+ok 7 - subtotal de R$ 100 paga frete
+  ---
+  duration_ms: 0.878768
+  type: 'test'
+  ...
+# Subtest: subtotal de R$ 400 tem frete grátis
+ok 8 - subtotal de R$ 400 tem frete grátis
+  ---
+  duration_ms: 0.151048
+  type: 'test'
+  ...
+# Subtest: quantidade 2 é aceita
+ok 9 - quantidade 2 é aceita
+  ---
+  duration_ms: 0.937788
+  type: 'test'
+  ...
+# Subtest: quantidade fracionária é recusada
+ok 10 - quantidade fracionária é recusada
+  ---
+  duration_ms: 0.112179
+  type: 'test'
+  ...
+# Subtest: quantidade zero é recusada
+ok 11 - quantidade zero é recusada
+  ---
+  duration_ms: 0.091939
+  type: 'test'
+  ...
+# Subtest: a última unidade pode ser vendida
+ok 12 - a última unidade pode ser vendida
+  ---
+  duration_ms: 0.100492
+  type: 'test'
+  ...
+# Subtest: quantidade acima do estoque não está disponível
+ok 13 - quantidade acima do estoque não está disponível
+  ---
+  duration_ms: 0.084928
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 23494.393009

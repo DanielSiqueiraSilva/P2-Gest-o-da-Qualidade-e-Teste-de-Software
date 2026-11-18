@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: cupom e desconto automático não se acumulam
+ok 1 - cupom e desconto automático não se acumulam
+  ---
+  duration_ms: 1.713599
+  type: 'test'
+  ...
+# Subtest: subtotal de R$ 250 recebe 10% de desconto automático
+ok 2 - subtotal de R$ 250 recebe 10% de desconto automático
+  ---
+  duration_ms: 0.839554
+  type: 'test'
+  ...
+# Subtest: subtotal de R$ 100 paga frete
+ok 3 - subtotal de R$ 100 paga frete
+  ---
+  duration_ms: 1.094707
+  type: 'test'
+  ...
+# Subtest: subtotal de R$ 400 tem frete grátis
+ok 4 - subtotal de R$ 400 tem frete grátis
+  ---
+  duration_ms: 0.25203
+  type: 'test'
+  ...
+# Subtest: quantidade 2 é aceita
+ok 5 - quantidade 2 é aceita
+  ---
+  duration_ms: 0.689798
+  type: 'test'
+  ...
+# Subtest: quantidade fracionária é recusada
+ok 6 - quantidade fracionária é recusada
+  ---
+  duration_ms: 0.109254
+  type: 'test'
+  ...
+# Subtest: quantidade zero é recusada
+ok 7 - quantidade zero é recusada
+  ---
+  duration_ms: 0.081593
+  type: 'test'
+  ...
+# Subtest: a última unidade pode ser vendida
+ok 8 - a última unidade pode ser vendida
+  ---
+  duration_ms: 0.097607
+  type: 'test'
+  ...
+# Subtest: quantidade acima do estoque não está disponível
+ok 9 - quantidade acima do estoque não está disponível
+  ---
+  duration_ms: 0.087381
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 122.853434
